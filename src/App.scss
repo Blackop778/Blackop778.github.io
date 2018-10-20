@@ -1,0 +1,27 @@
+:local {
+    .container {
+        margin: auto;
+        max-width: 600px;
+    }
+
+    .nav {
+        ul {
+            padding-left: 0;
+        }
+
+        li {
+            display: inline-block;
+            list-style: none;
+            padding-right: 10px;
+        }
+    }
+
+    .footer {
+        display: flex;
+
+        li {
+            padding-bottom: 15px;
+            list-style: none;
+        }
+    }
+}
