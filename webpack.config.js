@@ -92,5 +92,6 @@ module.exports = {
       test: /\.css$/,
       log: false,
     }),
-  ],
+    // Removes any null values, which would cause an error
+  ].filter(Boolean),
 };
