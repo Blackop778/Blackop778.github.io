@@ -1,6 +1,6 @@
 import { bind } from "classnames/bind";
 import React = require("react");
-import { BrowserRouter, Link } from "react-router-dom";
+import { HashRouter, Link } from "react-router-dom";
 
 import styles = require("./App.scss");
 import Routes from "./Routes";
@@ -8,7 +8,7 @@ import Routes from "./Routes";
 const cx = bind(styles);
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <main className={cx("container")}>
     <div className={cx("nav")}>
         <ul>
@@ -35,7 +35,7 @@ const App = () => (
         </ul>
       </div>
     </main>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
