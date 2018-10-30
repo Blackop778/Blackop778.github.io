@@ -37,11 +37,6 @@ module.exports = {
         loader: "awesome-typescript-loader"
       },
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loaders: ['babel-loader'],
-      },
-      {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,

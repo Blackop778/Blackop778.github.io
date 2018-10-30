@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Blackop778/Blackop778.github.io.git"
+    "type": "git",
+    "url": "https://github.com/Blackop778/Blackop778.github.io.git"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server -d",
@@ -16,17 +16,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.1.0",
     "@types/classnames": "^2.2.6",
     "@types/webpack-env": "^1.13.6",
     "autoprefixer": "^9.2.1",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.4",
     "classnames": "^2.2.6",
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.2.0",
