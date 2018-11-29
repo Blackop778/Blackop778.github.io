@@ -1,0 +1,13 @@
+:local {
+    .dropdown {
+        display: inline-block;
+
+        .dropdown-content {
+            display: none;
+        }
+
+        &:hover > .dropdown-content, .show {
+            display: block;
+        }
+    }
+}
