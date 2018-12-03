@@ -8,8 +8,9 @@
     "url": "https://github.com/Blackop778/Blackop778.github.io.git"
   },
   "scripts": {
+    "lint": "tslint src/**/*.tsx src/**/*.ts && stylelint src/**/*.scss",
     "start": "cross-env NODE_ENV=development webpack-dev-server -d",
-    "build": "cross-env NODE_ENV=production webpack -p",
+    "build": "npm run lint && cross-env NODE_ENV=production webpack -p",
     "deploy": "gh-pages -d build -b master"
   },
   "keywords": [],
@@ -36,7 +37,10 @@
     "sass-loader": "^7.1.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
-    "stylelint": "^9.6.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-order": "^2.0.0",
+    "stylelint-scss": "^3.4.0",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
     "tslint-react-a11y": "^1.0.0",

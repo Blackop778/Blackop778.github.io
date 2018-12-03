@@ -1,0 +1,23 @@
+:local {
+    .checkbox-container {
+        display: block;
+        margin: .2em;
+    }
+
+    .checkbox {
+        background: gray;
+        border: 1px solid black;
+        display: inline-block;
+        height: 1em;
+        margin-right: .5em;
+        width: 1em;
+    }
+
+    .checked {
+        background: blue;
+    }
+
+    .checkbox-text {
+        margin: auto 0;
+    }
+}

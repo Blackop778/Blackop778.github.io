@@ -1,6 +1,7 @@
 import { bind } from "classnames/bind";
 import React = require("react");
 
+import Checkbox from "./Checkbox";
 import Dropdown from "./Dropdown";
 import styles = require("./FilterDisplay.scss");
 import { languages } from "./Languages";
@@ -26,6 +27,14 @@ class FilterDisplay extends React.Component<IProps, IState> {
         this.state = { languages: languageStates };
     }
 
+    public onBoxChecked(index: number, newState: boolean) {
+        const newLanguageState = this.state.languages;
+
+        newLanguageState[index] = newState;
+
+        this.setState({ languages: newLanguageState });
+    }
+
     public render() {
         const children = React.Children.map(this.props.children, (child: React.ReactElement<ProjectProps>) => {
             if (React.isValidElement(child)) {
@@ -33,9 +42,24 @@ class FilterDisplay extends React.Component<IProps, IState> {
             }
         });
 
+        const languageCheckboxes = Object.values(languages).map((language) => {
+            return (
+                <Checkbox
+                    key={language.index}
+                    checked={true}
+                    label={language.displayName}
+                    onChanged={this.onBoxChecked.bind(this, language.index)}
+                />
+            );
+        });
+
         return (
             <div>
-                <Dropdown />
+                <div className={cx("dropdown-container")} >
+                    <Dropdown label="Shown Languages">
+                        {languageCheckboxes}
+                    </Dropdown>
+                </div>
                 {children}
             </div>
         );

@@ -1,9 +1,15 @@
 :local {
     .dropdown {
         display: inline-block;
+        position: relative;
 
         .dropdown-content {
+            background: #fff;
+            border: 1px solid black;
             display: none;
+            left: 0;
+            position: absolute;
+            right: 0;
         }
 
         &:hover > .dropdown-content, .show {

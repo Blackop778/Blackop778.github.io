@@ -13,9 +13,7 @@ interface IProps {
     languages?: boolean[];
 }
 
-class Project extends React.PureComponent<IProps, {}> {
-    public language: Language;
-
+class Project extends React.Component<IProps, {}> {
     public constructor(props: IProps) {
         super(props);
     }

@@ -5,7 +5,7 @@
         "noImplicitAny": true,
         "module": "commonjs",
         "target": "es5",
-        "lib": ["dom", "scripthost", "es6"],
+        "lib": ["dom", "scripthost", "es6", "es2017.object"],
         "jsx": "react"
     },
     "include": [

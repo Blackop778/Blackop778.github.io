@@ -1,5 +1,6 @@
 import { bind } from "classnames/bind";
 import React = require("react");
+import { hot } from "react-hot-loader";
 import { HashRouter, Link } from "react-router-dom";
 
 import styles = require("./App.scss");
@@ -38,4 +39,4 @@ const App = () => (
   </HashRouter>
 );
 
-export default App;
+export default hot(module)(App);

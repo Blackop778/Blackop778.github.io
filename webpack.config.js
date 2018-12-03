@@ -29,7 +29,7 @@ module.exports = {
     historyApiFallback: true,
   },
   devtool: dev ? "source-map" : false,
-  entry: ['react-hot-loader/patch', path.join(__dirname, '/src/index.tsx')],
+  entry: path.join(__dirname, '/src/index.tsx'),
   module: {
     rules: [
       {
@@ -53,7 +53,7 @@ module.exports = {
             options: {
               ident: 'postcss',
               plugins: [
-                Autoprefixer(),
+                Autoprefixer({ browsers: 'last 2 version' }),
               ],
             },
           },
