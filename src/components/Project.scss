@@ -1,4 +1,27 @@
 :local {
+    .project {
+        // border: 1px solid black;
+        display: flex;
+        width: 100%;
+
+        .text {
+            box-sizing: content-box;
+            // float: left;
+            width: 85%;
+        }
+
+        .img-container {
+            box-sizing: content-box;
+            // float: left;
+            padding: 5px;
+            width: 15%;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
     .hidden {
         display: none;
     }

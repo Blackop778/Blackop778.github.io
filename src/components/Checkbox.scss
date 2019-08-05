@@ -1,6 +1,7 @@
 :local {
     .checkbox-container {
-        display: block;
+        align-items: center;
+        display: flex;
         margin: .2em;
     }
 
@@ -15,9 +16,5 @@
 
     .checked {
         background: blue;
-    }
-
-    .checkbox-text {
-        margin: auto 0;
     }
 }

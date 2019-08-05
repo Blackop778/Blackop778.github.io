@@ -3,13 +3,17 @@
         display: inline-block;
         position: relative;
 
+        .dropdown-button {
+            border: #606060;
+            border-radius: 0;
+        }
+
         .dropdown-content {
             background: #fff;
-            border: 1px solid black;
+            box-shadow: 2px 2px 3px 0px #999999;
             display: none;
             left: 0;
             position: absolute;
-            right: 0;
         }
 
         &:hover > .dropdown-content, .show {

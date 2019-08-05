@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const Autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
 const CleanPlugin = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -39,27 +39,18 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          dev ? { loader: 'style-loader', options: { sourceMap: true } } : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
+              // style-loader handles sourcemapping
+              sourceMap: false,
               importLoaders: 2,
               localIdentName: '[name]__[local]___[hash:base64:5]',
             },
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: [
-                Autoprefixer({ browsers: 'last 2 version' }),
-              ],
-            },
-          },
-          {
-            loader: 'sass-loader',
-          },
+          'postcss-loader',
+          'sass-loader',
         ],
       },
       {
@@ -86,6 +77,9 @@ module.exports = {
     new PostCSSAssetsPlugin({
       test: /\.css$/,
       log: false,
+      plugins: [
+        autoprefixer
+      ],
     }),
     // Removes any null values, which would cause an error
   ].filter(Boolean),

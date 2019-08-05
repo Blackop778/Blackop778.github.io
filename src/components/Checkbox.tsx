@@ -34,7 +34,7 @@ class Checkbox extends React.Component<IProps, IState> {
         return (
             <div className={cx("checkbox-container")}>
                 <div className={cx(checkboxClassnames)} onClick={this.onCheckboxClicked} />
-                <span className={cx("checkbox-text")}>{this.props.label}</span>
+                <span>{this.props.label}</span>
             </div>
         );
     }

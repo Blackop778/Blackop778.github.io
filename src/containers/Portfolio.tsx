@@ -9,7 +9,12 @@ const Portfolio = () => {
         <div>
             <h2>My Portfilio</h2>
             <FilterDisplay>
-                <Project title="test1" description={<p>I'm a java project</p>} language={languages.JAVA} />
+                <Project
+                    title="test1"
+                    description={<p>I'm a java project</p>}
+                    language={languages.JAVA}
+                    githubLink="https://github.com/Blackop778/Solitaire"
+                />
                 <Project title="test2" description={<p>I'm a C++ project</p>} language={languages.CPP} />
             </FilterDisplay>
         </div>

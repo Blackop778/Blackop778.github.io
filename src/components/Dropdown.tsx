@@ -30,8 +30,8 @@ class Dropdown extends React.Component<IProps, IState> {
     public render() {
         const contentClassnames = ["dropdown-content", this.state.clicked && "show"];
         return (
-            <div className={cx("dropdown")} >
-                <div onClick={this.onClick}>{this.props.label}</div>
+            <div className={cx("dropdown")}>
+                <button onClick={this.onClick} className={cx("dropdown-button")}>{this.props.label}</button>
                 <div className={cx(contentClassnames)}>
                     {React.Children.toArray(this.props.children)}
                 </div>
